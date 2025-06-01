@@ -113,7 +113,7 @@ export const AgentUpdateForm = ({ agentId, onSuccess }: AgentUpdateFormProps) =>
           switching: agent.language?.switching || false,
           synthesizer: {
             voiceConfig: {
-              model: agent.language?.synthesizer?.voiceConfig?.model || 'waves_lightning_large',
+              model: (agent.language?.synthesizer?.voiceConfig?.model as 'waves' | 'waves_lightning_large' | 'waves_lightning_large_voice_clone') || 'waves_lightning_large',
               voiceId: agent.language?.synthesizer?.voiceConfig?.voiceId || '',
               gender: agent.language?.synthesizer?.voiceConfig?.gender || 'male',
             },
