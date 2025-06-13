@@ -233,3 +233,4 @@ app.listen(PORT, () => {
   console.log(`Proxy server running on port ${PORT}`);
   console.log(`API key is ${API_KEY.startsWith('sk_') ? 'configured' : 'missing - check .env file'}`);
 });
+
