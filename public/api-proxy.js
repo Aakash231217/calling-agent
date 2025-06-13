@@ -11,7 +11,12 @@ dotenv.config();
 const app = express();
 const PORT = 3001;
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://palegoldenrod-dogfish-630246.hostingersite.com',
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 app.use(express.json());
 
 // Basic test route
