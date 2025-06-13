@@ -12,10 +12,10 @@ const app = express();
 const PORT = 3001;
 
 app.use(cors({
-  origin: 'https://palegoldenrod-dogfish-630246.hostingersite.com',
+  origin: '*',
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
+  allowedHeaders: ['Content-Type', 'Authorization','X-Requested-With']
 }));
 app.use(express.json());
 
